@@ -26,5 +26,21 @@ total_spent = saving_amount + rent_amount + elect_amount
 #what's left of the user's salary
 left_salary = nabihas_salary - total_spent
 
+#Estimate yearly costs
+annual_rent = 12 * rent_amount
+annual_elec = 12 * elect_amount
+
+#Estimate the square of the user's salary for fun
+extra_money = nabihas_salary ** 2
+
+#Calculate the additional savings
+additional_savings = int (input('Enter the monthly additional saving   '))#the amount of additional saving
+#the additional amount saved over a year
+annual_add_saving = additional_savings * 12 
+#the initial amount saved over a year
+total_annual_savings = saving_amount * 12
+#the contribution the additional saved amount does to the initial one.
+divided_amount  = (annual_add_saving / total_annual_savings) * 100
+
 
 
