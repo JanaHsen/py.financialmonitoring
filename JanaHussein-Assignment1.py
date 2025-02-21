@@ -45,12 +45,9 @@ else:
 
                 #Calculate the additional savings
                 additional_savings = int (input('Enter the monthly additional saving   '))#the amount of additional saving
-                #the additional amount saved over a year
-                annual_add_saving = additional_savings * 12 
-                #the initial amount saved over a year
-                total_annual_savings = saving_amount * 12   
-                #the contribution the additional saved amount does to the initial one.
-                divided_amount  = (annual_add_saving / total_annual_savings) * 100
+                  
+                #the remainder after dividing by the initial amount
+                divided_amount  = (additional_savings % saving_amount)
 
                 #3)Display
                 print ('_____________________________________________________________________________________________________________________')
@@ -61,8 +58,7 @@ else:
                 print("Your total spendings for this month are",total_spent,'$')
                 print("The remaing amount of your salary is",left_salary,'$')
                 print("Your annual expenses for rent and electricity are",annual_rent,'$ and',annual_elec,'$ respectively')
-                print("Your annual savings amount is",total_annual_savings,'$')
-                print('In the case where you save an additional',additional_savings,'$ monthly, you will be contributing with',divided_amount,"% to your annual savings")
+                print('In the case where you save an additional',additional_savings,'$ monthly, you will be contributing with',divided_amount, "to your savings")
                 print('In case you ever get rich and your salary gets squared, you will have', extra_money,'$')
                 print ('_____________________________________________________________________________________________________________________')
 
